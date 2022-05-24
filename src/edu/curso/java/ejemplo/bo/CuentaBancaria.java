@@ -1,6 +1,6 @@
 package edu.curso.java.ejemplo.bo;
 
-public class CuentaBancaria {
+public abstract class CuentaBancaria {
 
 	private Long numeroDeCuenta;
 	private Double saldo;
@@ -25,9 +25,7 @@ public class CuentaBancaria {
 		this.saldo = saldo;
 	}
 	
-	public void extraer(Double monto) {
-		this.saldo = this.saldo - monto;
-	}
+	public abstract void extraer(Double monto);
 
 	public Long getNumeroDeCuenta() {
 		return numeroDeCuenta;

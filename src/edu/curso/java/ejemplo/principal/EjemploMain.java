@@ -7,23 +7,22 @@ public class EjemploMain {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		CuentaBancaria cuentaBancaria1 = new CuentaBancaria();
-		cuentaBancaria1.setNumeroDeCuenta(987654L);
-		cuentaBancaria1.setSaldo(10000.0);
-		cuentaBancaria1.extraer(1000.0);
-
-		System.out.println("El saldo final es " 
-				+ cuentaBancaria1.getSaldo() );
+		CuentaCorriente cuentaCorriente1 = new CuentaCorriente(12331L, 250000.0);
+		System.out.println(cuentaCorriente1);
 		
-		CuentaBancaria cuentaBancaria2 = new CuentaBancaria(4334L, 5000.0);
-	
-	
 		CajaDeAhorro cajaDeAhorro1 = new CajaDeAhorro(424234L, 50000.0);
-		cajaDeAhorro1.extraer(90000.0);
 		System.out.println(cajaDeAhorro1);
+		
+		Seguro seguro1 = new Seguro();
 		
 		Banco banco1 = new Banco();
 		banco1.ejecutarExtraccion(cajaDeAhorro1, 3000.0);
+		banco1.ejecutarExtraccion(cuentaCorriente1, 5000.0);
+		
+		banco1.venderProducto(cuentaCorriente1);
+		banco1.venderProducto(seguro1);
+		banco1.venderProducto(cajaDeAhorro1);
+		
 		
 	}
 	

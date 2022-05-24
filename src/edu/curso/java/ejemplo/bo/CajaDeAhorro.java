@@ -1,6 +1,6 @@
 package edu.curso.java.ejemplo.bo;
 
-public class CajaDeAhorro extends CuentaBancaria {
+public class CajaDeAhorro extends CuentaBancaria implements Producto {
 
 	public CajaDeAhorro() {
 		
@@ -19,6 +19,12 @@ public class CajaDeAhorro extends CuentaBancaria {
 		} else {
 			System.out.println("No tenes tanta plata en la cuenta: " + super.toString());
 		}
+	}
+
+	@Override
+	public Double calcularPrecioDeVenta() {
+		// TODO Auto-generated method stub
+		return 800.0;
 	}
 
 }
